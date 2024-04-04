@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background: #fbeff4;
+    margin: 0px;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.2fr; 
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+}
+
+p{
+   padding: -10px;
+   margin: 5px;
+}
+.item{
+   border: 1px solid black;
+    padding: 0px;
+    font-size: 1em;
+}
+
+.logo, .nav {
+    padding: 8px;
+}
+.header{
+    grid-column: 1/3;
+    border: 1px solid black; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+   
+}
+
+.one{
+   grid-column: 1/3;
+}
+
+.logo{
+    grid-column:1/3;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.nav{
+    grid-column:1/3;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.footer{
+    grid-column:1/3 ;
+    border: 1px solid black;
+   text-align: center;
+   padding: 15px;
+}
+
+@media screen and (min-width: 650px) {
+
+.container{
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.1fr;
+}
+
+.one{
+    grid-column: 1/4;
+}
+
+.header{
+    grid-column: 1/4;
+}
+
+.footer{
+    grid-column: 1/4;
+}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .container{
+        grid-template-areas: 
+        "header header header"
+        "banner banner banner0"
+        "banner banner banner1"
+        "række  række1 række1 "
+        "række0 række1 række1 "
+        "img1   img2   img3";
+        gap: 80px 20px;
+       
+    }
+    
+    .one{
+        grid-area: banner }
+        
+
+    .two{
+        grid-area: banner1;
+    }
+    
+    .three{
+        grid-area: række0 ;
+    }
+    .four{
+       grid-area: række1;
+    }
+
+    .five{
+        grid-area: img1;
+    }
+
+    .six{
+        grid-area: img2; 
+    }
+
+    .seven{
+        grid-area: img3;
+    }
+
+    .nav{
+    width: 50%;
+    }
+
+    }
